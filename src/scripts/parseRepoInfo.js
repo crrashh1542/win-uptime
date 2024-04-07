@@ -24,9 +24,9 @@ const pUI = 'v' + packageDeps['@fluentui/web-components'].split('^')[1] // 组�
 
 // 导出数据
 export default [
-    ['项目版本', 'icon-version' , pVersion],
-    ['项目地址', 'icon-github', packageRepo, pRepoName],
-    ['Vue 框架版本', 'icon-vuejs', pVue],
-    ['Fluent UI 组件库版本', 'icon-fluent', pUI],
-    ['交流群组', 'icon-qq', 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=i3uo_SoY8qYCP-DwlWN0MvBFzU7dIl-V&authKey=aAv%2FFuOJzObVvjbo5vV6%2FRDsT103410PnidS493vqwnLMe4xPwsI1g9UwRvlMANS&noverify=0&group_code=442133970', '442133970']
+    ['项目版本', 'w-icon-version' , pVersion],
+    ['项目地址', 'w-icon-github', packageRepo, pRepoName],
+    ['Vue 框架版本', 'w-icon-vuejs', pVue],
+    ['Fluent UI 组件库版本', 'w-icon-fluent', pUI],
+    ['交流群组', 'w-icon-qq', 'https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=i3uo_SoY8qYCP-DwlWN0MvBFzU7dIl-V&authKey=aAv%2FFuOJzObVvjbo5vV6%2FRDsT103410PnidS493vqwnLMe4xPwsI1g9UwRvlMANS&noverify=0&group_code=442133970', '442133970']
 ]
