@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 /**
  * 此脚本用于在处理本项目相关信息
  * @author crrashh1542
@@ -24,9 +24,13 @@ const pUI = 'v' + packageDeps['@fluentui/web-components'].split('^')[1] // 组�
 
 // 导出数据
 export default [
-    ['项目版本', 'w-icon-version' , pVersion],
-    ['项目地址', 'w-icon-github', packageRepo, pRepoName],
-    ['Vue 框架版本', 'w-icon-vuejs', pVue],
-    ['Fluent UI 组件库版本', 'w-icon-fluent', pUI],
-    ['交流群组', 'w-icon-qq', 'https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=i3uo_SoY8qYCP-DwlWN0MvBFzU7dIl-V&authKey=aAv%2FFuOJzObVvjbo5vV6%2FRDsT103410PnidS493vqwnLMe4xPwsI1g9UwRvlMANS&noverify=0&group_code=442133970', '442133970']
+   ['项目版本', 'w-icon-version', pVersion],
+   ['项目地址', 'w-icon-github', packageRepo, pRepoName],
+   ['Vue 框架版本', 'w-icon-vuejs', pVue],
+   ['Fluent UI 组件库版本', 'w-icon-fluent', pUI],
+   [
+      '交流群组', 'w-icon-qq',
+      '//qm.qq.com/cgi-bin/qm/qr?k=i3uo_SoY8qYCP-DwlWN0MvBFzU7dIl-V&group_code=442133970',
+      '442133970',
+   ],
 ]

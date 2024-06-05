@@ -18,15 +18,17 @@ export default {
    name: 'App',
    components: { Appbar, Foo, Setting, Navbar },
    setup() {
-
       // STEP1 ------ 设置卡片显示的初始值，避免出现 undefined
       let [oriFlightVisibility, oriBranchVisibility] = [true, true]
       let data = reactive({
          isShowFlight: oriFlightVisibility,
-         isShowBranch: oriBranchVisibility
+         isShowBranch: oriBranchVisibility,
       })
-      let [flightVisibility, branchVisibility] = [oriFlightVisibility, oriBranchVisibility]
-      
+      let [flightVisibility, branchVisibility] = [
+         oriFlightVisibility,
+         oriBranchVisibility,
+      ]
+
       // 切换显示状态
       function setState(emitData) {
          // STEP2 ------ 获取子组件传递的信息 和 App 的 data 信息，0 是类型，1 是值
@@ -38,7 +40,7 @@ export default {
          } else if (stateType === 'isShowBranch') {
             branchVisibility = stateValue
          }
-         
+
          // STEP4 ------ 对 data 数据做出替换
          data.isShowFlight = flightVisibility
          data.isShowBranch = branchVisibility
@@ -46,9 +48,8 @@ export default {
          // console.log('flight ', data.isShowFlight, '\nbranch ', data.isShowBranch)
       }
       return { ...toRefs(data), setState }
-   }
+   },
 }
-
 </script>
 
 <template>
@@ -68,7 +69,7 @@ export default {
    width: 100%;
    height: 100%;
    z-index: -10;
-   background-color: rgba(255, 255, 255, .87);
+   background-color: rgba(255, 255, 255, 0.87);
    backdrop-filter: blur(6px);
 }
 

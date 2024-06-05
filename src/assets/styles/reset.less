@@ -16,52 +16,132 @@
 
 // 文档流初始化
 body {
-    background-size: cover;
-    background-image: url('../images/bg.webp');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    height: 100%;
-    font-family: @wu-font-family;
-    div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
-    label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, 
-    hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        vertical-align: baseline;
-    }
-    blockquote:before, blockquote:after, q:before, q:after {
-        content: '';
-        content: none;
-    }
-    p {
-        font-size: 18px;
-        line-height: 1.6em;
-        margin: 1em 0;
-    }
-    #app {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
+   background-size: cover;
+   background-image: url('../images/bg.webp');
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   overflow-x: hidden;
+   height: 100%;
+   font-family: @wu-font-family;
+   div,
+   span,
+   applet,
+   object,
+   iframe,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6,
+   p,
+   blockquote,
+   pre,
+   a,
+   abbr,
+   acronym,
+   address,
+   big,
+   cite,
+   code,
+   del,
+   dfn,
+   em,
+   img,
+   ins,
+   kbd,
+   q,
+   s,
+   samp,
+   small,
+   strike,
+   strong,
+   sub,
+   sup,
+   tt,
+   var,
+   b,
+   u,
+   i,
+   center,
+   dl,
+   dt,
+   dd,
+   ol,
+   ul,
+   li,
+   fieldset,
+   form,
+   label,
+   legend,
+   table,
+   caption,
+   tbody,
+   tfoot,
+   thead,
+   tr,
+   th,
+   td,
+   article,
+   aside,
+   canvas,
+   details,
+   embed,
+   figure,
+   figcaption,
+   footer,
+   header,
+   hgroup,
+   menu,
+   nav,
+   output,
+   ruby,
+   section,
+   summary,
+   time,
+   mark,
+   audio,
+   video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+   }
+   blockquote:before,
+   blockquote:after,
+   q:before,
+   q:after {
+      content: '';
+      content: none;
+   }
+   p {
+      font-size: 18px;
+      line-height: 1.6em;
+      margin: 1em 0;
+   }
+   #app {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+   }
 
-    /* a标签图标及hover处理 */
-    a.link::after, p a::after {
-        color: @wu-color-text-accent;
-        font-size: 15px;
-        vertical-align: middle;
-        text-align: center;
-        margin-left: .1em;
-        display: inline-block;
-        content: '\e622';
-    }
-    .appbar a:hover, p a:hover {
-        color: @wu-color-theme !important;
-    }
-    .appbar a:hover::after, p a:hover::after {
-        color: @wu-color-theme;
-     }
-
+   /* a标签图标及hover处理 */
+   a.link::after,
+   p a::after {
+      color: @wu-color-text-accent;
+      font-size: 15px;
+      vertical-align: middle;
+      text-align: center;
+      margin-left: 0.1em;
+      display: inline-block;
+      content: '\e622';
+   }
+   .appbar a:hover,
+   p a:hover {
+      color: @wu-color-theme !important;
+   }
+   .appbar a:hover::after,
+   p a:hover::after {
+      color: @wu-color-theme;
+   }
 }

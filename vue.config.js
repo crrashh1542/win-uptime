@@ -20,16 +20,17 @@ module.exports = defineConfig({
    productionSourceMap: false,
    assetsDir: 'assets',
 
-   configureWebpack: config => {
+   configureWebpack: (config) => {
       // gzip 处理
       const plugins = []
       if (IS_PROD) {
-         plugins.push(new CompressionWebpackPlugin({
-               filename: "[path].gz[query]",
-               algorithm: "gzip",
+         plugins.push(
+            new CompressionWebpackPlugin({
+               filename: '[path].gz[query]',
+               algorithm: 'gzip',
                test: productionGzipExtensions,
                threshold: 10240,
-               minRatio: 0.8
+               minRatio: 0.8,
             })
          )
       }
@@ -39,15 +40,18 @@ module.exports = defineConfig({
       )
    },
 
-   chainWebpack: config => {
+   chainWebpack: (config) => {
       // 自定义元素设定
-      config.module.rule('vue').use('vue-loader').tap(options => ({
-         ...options,
-         compilerOptions: {
-            // 不解析所有 fluent- 开头的元素，作为自定义元素加载
-            isCustomElement: tag => tag.startsWith('fluent-')
-         }
-      }))
+      config.module
+         .rule('vue')
+         .use('vue-loader')
+         .tap((options) => ({
+            ...options,
+            compilerOptions: {
+               // 不解析所有 fluent- 开头的元素，作为自定义元素加载
+               isCustomElement: (tag) => tag.startsWith('fluent-'),
+            },
+         }))
 
       // chunk 拆分
       config.optimization.splitChunks({
@@ -58,7 +62,7 @@ module.exports = defineConfig({
                name: 'vendors',
                test: /[\\/]node_modules[\\/]/,
                priority: 10,
-               chunks: 'initial'
+               chunks: 'initial',
             },
 
             // GROUP2 ------ 项目内组件
@@ -66,14 +70,14 @@ module.exports = defineConfig({
                name: 'common',
                test: resolve('src/components'),
                priority: 25,
-               reuseExistingChunk: true
+               reuseExistingChunk: true,
             },
          },
       })
-      
+
       // GROUP3 ------ 运行时
       config.optimization.runtimeChunk({
-         name: 'runtime'
+         name: 'runtime',
       })
    },
 
@@ -81,5 +85,5 @@ module.exports = defineConfig({
       host: '0.0.0.0',
       port: 14724,
       open: true,
-   }
+   },
 })
