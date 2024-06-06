@@ -3,13 +3,13 @@
 /**
  * 此脚本用于在开始打包前处理配置信息
  * @author crrashh1542
- * @version 1.5
+ * @version 2.0
  */
 
 // STEP1 -------- 导入依赖
-const fs = require('fs')
-const childProcess = require('child_process')
-const moment = require('moment')
+import fs  from 'node:fs'
+import childProcess from 'node:child_process'
+import moment from 'moment'
 
 // STEP2 -------- 获取构建时间
 function getTime() {
@@ -39,8 +39,7 @@ function getBuild(params) {
 // STEP4 -------- 获取构建次数
 function getBranch(params) {
    const buildBranch = childProcess
-      .execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' })
-      .split('\n')[0]
+      .execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).split('\n')[0]
    console.log('[buildInfo] 已获取当前分支：' + buildBranch)
    return buildBranch
 }
@@ -49,19 +48,11 @@ function getBranch(params) {
 function writeInfo() {
    // 组装要输出的内容
    const content =
-      `   {
-      "time": "` +
-      getTime() +
-      `",
-      "hash": "` +
-      getHash() +
-      `",
-      "build": ` +
-      getBuild() +
-      `,
-      "branch": "` +
-      getBranch() +
-      `"
+   `   {
+      "time": "` + getTime() + `",
+      "hash": "` + getHash() + `",
+      "build": ` + getBuild() + `,
+      "branch": "` + getBranch() + `"
    }`
 
    // 将 buildInfo 内容写入文件
@@ -76,4 +67,4 @@ function writeInfo() {
 }
 
 // STEP7 -------- 导出函数
-module.exports = writeInfo
+export default writeInfo

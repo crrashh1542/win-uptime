@@ -31,7 +31,7 @@ const navSections = [
 </template>
 
 <style lang="less" scoped>
-@import url('../assets/styles/global.less');
+@import url('@s/global.less');
 
 .navbar {
    display: var(--nav-display);

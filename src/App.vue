@@ -6,7 +6,7 @@ import 'normalize.css/normalize.css'
 import { toRefs, reactive } from 'vue'
 
 // 引入样式
-import './assets/styles/reset.less'
+import '@s/reset.less'
 
 // 引入组件
 import Appbar from './components/Appbar.vue'
@@ -64,7 +64,7 @@ export default {
 </template>
 
 <style scoped>
-@import url('./assets/styles/adaption.less');
+@import url('@s/adaption.less');
 .bg-shade {
    width: 100%;
    height: 100%;

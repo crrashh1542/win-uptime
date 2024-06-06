@@ -49,8 +49,8 @@ export default {
 </template>
 
 <style lang="less" scoped>
-@import url('../assets/styles/global.less');
-@import url('../assets/styles/adaption.less');
+@import url('@s/global.less');
+@import url('@s/adaption.less');
 
 .banner {
    padding: @wu-layout-nav-height 0 15px;

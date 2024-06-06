@@ -15,7 +15,7 @@ defineOptions({ name: 'WidgetTopNav' })
 </template>
 
 <style lang="less">
-@import url('../assets/styles/global.less');
+@import url('@s/global.less');
 .nav {
    margin: 0 0.4em 12px;
    color: #666;

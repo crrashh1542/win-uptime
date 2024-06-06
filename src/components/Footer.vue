@@ -13,8 +13,8 @@ defineOptions({ name: 'MainFooter' })
 </template>
 
 <style lang="less" scoped>
-@import url('../assets/styles/global.less');
-@import url('../assets/styles/adaption.less');
+@import url('@s/global.less');
+@import url('@s/adaption.less');
 
 .footer {
    background-color: var(--footer-bg);

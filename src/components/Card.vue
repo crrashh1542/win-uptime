@@ -14,8 +14,8 @@ export default {
 </template>
 
 <style lang="less">
-@import url('../assets/styles/global.less');
-@import url('../assets/styles/theme.less');
+@import url('@s/global.less');
+@import url('@s/theme.less');
 
 .card {
    line-height: 1.2;

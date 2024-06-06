@@ -75,7 +75,7 @@ const sources = [
 </template>
 
 <style lang="less" scoped>
-@import url('../assets/styles/global.less');
+@import url('@s/global.less');
 .card {
    padding: 10px 18px;
 

@@ -4,6 +4,7 @@
    "description": "A website project showing the latest status of Windows Insider versions.",
    "author": "crrashh1542 <kotsuki@crrashh.com>",
    "homepage": "https://wutd.crrashh.com",
+   "type": "module",
    "repository": {
       "type": "git",
       "url": "git+https://github.com/crrashh1542/win-up-to-date"
@@ -14,35 +15,27 @@
       "url": "https://github.com/crrashh1542/win-up-to-date/issues"
    },
    "scripts": {
-      "serve": "vue-cli-service serve",
-      "build": "vue-cli-service build",
-      "lint": "vue-cli-service lint",
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview",
       "p:check": "prettier . --check",
       "p:write": "prettier . --write"
    },
    "devDependencies": {
-      "@babel/core": "^7.24.4",
-      "@babel/eslint-parser": "^7.24.1",
       "@fluentui/web-components": "^2.6.0",
-      "@typescript-eslint/eslint-plugin": "^7.5.0",
-      "@typescript-eslint/parser": "^7.5.0",
-      "@vue/cli-plugin-babel": "~5.0.8",
-      "@vue/cli-plugin-eslint": "~5.0.8",
-      "@vue/cli-service": "~5.0.8",
+      "@vitejs/plugin-vue": "^5.0.5",
       "autoprefixer": "^10.4.19",
       "axios": "^1.6.8",
-      "compression-webpack-plugin": "^11.1.0",
-      "core-js": "^3.36.1",
       "eslint": "^8.57.0",
       "eslint-plugin-vue": "^9.24.0",
       "js-cookie": "^3.0.5",
       "less": "^4.2.0",
-      "less-loader": "^12.2.0",
       "moment": "^2.30.1",
       "normalize.css": "^8.0.1",
       "postcss": "^8.4.38",
-      "speed-measure-webpack-plugin": "^1.5.0",
+      "prettier": "^3.3.1",
       "tailwindcss": "^3.4.3",
+      "vite": "^5.2.12",
       "vue": "^3.4.21",
       "vue-clipboard3": "^2.0.0",
       "vue-router": "^4.3.0"
@@ -56,9 +49,6 @@
          "plugin:vue/vue3-essential",
          "eslint:recommended"
       ],
-      "parserOptions": {
-         "parser": "@babel/eslint-parser"
-      },
       "rules": {}
    },
    "browserslist": [
@@ -67,8 +57,5 @@
       "not dead",
       "not ie 11"
    ],
-   "packageManager": "pnpm@9.1.0",
-   "dependencies": {
-      "prettier": "^3.3.1"
-   }
+   "packageManager": "pnpm@9.2.0"
 }

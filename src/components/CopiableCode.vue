@@ -37,7 +37,7 @@ export default {
 </template>
 
 <style lang="less" scoped>
-@import url('../assets/styles/global.less');
+@import url('@s/global.less');
 
 code {
    background-color: @wu-color-theme-lighter;

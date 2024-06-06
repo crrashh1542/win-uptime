@@ -9,7 +9,7 @@ defineOptions({ name: 'WidgetCatalog' })
 </template>
 
 <style lang="less" scoped>
-@import url('../assets/styles/global.less');
+@import url('@s/global.less');
 
 .catalog {
    color: @wu-color-text-imp;

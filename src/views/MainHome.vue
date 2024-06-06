@@ -135,7 +135,7 @@ export default {
 </template>
 
 <style lang="less" scoped>
-@import url('../assets/styles/global.less');
+@import url('@s/global.less');
 
 .block {
    margin: 15px 0;

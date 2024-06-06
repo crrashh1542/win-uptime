@@ -1,0 +1,57 @@
+/* 此样式表用于基础初始化
+ * Date: 2023-12-30 / Version: 1.2
+ */
+
+// 引入字体
+@import url('https://s.cdn.crrashh.com/prod/font/Google-Sans/aa7bb3f3-b88d-4f98-3310-83626911a5ba/index.css');
+@import url('@a/fonts/iconfont/iconfont.less');
+
+// 全局变量
+@import url('@s/global.less');
+
+// 启用 Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// 文档流初始化
+body {
+   background-size: cover;
+   background-image: url('@a/images/bg.webp');
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   overflow-x: hidden;
+   height: 100%;
+   font-family: @wu-font-family;
+   blockquote:before, blockquote:after, q:before, q:after {
+      content: '';
+      content: none;
+   }
+   p {
+      font-size: 18px;
+      line-height: 1.6em;
+      margin: 1em 0;
+   }
+   #app {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+   }
+
+   /* a标签图标及hover处理 */
+   a.link::after, p a::after {
+      color: @wu-color-text-accent;
+      font-size: 15px;
+      vertical-align: middle;
+      text-align: center;
+      margin-left: 0.1em;
+      display: inline-block;
+      content: '\e622';
+   }
+   .appbar a:hover, p a:hover {
+      color: @wu-color-theme !important;
+   }
+   .appbar a:hover::after, p a:hover::after {
+      color: @wu-color-theme;
+   }
+}
