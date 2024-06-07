@@ -8,7 +8,14 @@ prebuild()
 
 // https://vitejs.dev/config/
 export default defineConfig({
-   plugins: [vue()],
+   plugins: [vue({
+      template: {
+         compilerOptions: {
+            // 不解析 fluent- 开头的 Web Component 元素
+            isCustomElement: tag => tag.startsWith('fluent-')
+         }
+      }
+   })],
    resolve: {},
    server: {
       port: 14724,
