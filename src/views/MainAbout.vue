@@ -5,7 +5,7 @@ import Card from '../components/Card.vue'
 
 // 设定数据
 document.title = '关于项目 / Windows Up-to-Date'
-import buildInfo from '../scripts/parseRepoInfo'
+import buildInfo from '../utils/parseRepoInfo'
 const sources = [
    ['https://msbuilds.rg-adguard.net', 'MSFT BUFFET DATABASE'],
    ['https://changewindows.org', 'ChangeWindows'],
