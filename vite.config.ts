@@ -27,6 +27,7 @@ export default defineConfig({
             assetFileNames: '_wu/assets/[name].[hash].[ext]',
             chunkFileNames: '_wu/[name].[hash].js',
             entryFileNames: '_wu/[name].[hash].js',
+            minifyInternalExports: true,
             manualChunks(id) {
                if(id.includes('@vue/runtime-core')) {
                   return 'vendors/vue-runtime'
