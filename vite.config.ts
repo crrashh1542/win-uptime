@@ -16,7 +16,6 @@ export default defineConfig({
          }
       }
    })],
-   resolve: {},
    server: {
       port: 14724,
       host: true
@@ -25,9 +24,30 @@ export default defineConfig({
       rollupOptions: {
          output: {
             hashCharacters: 'hex',
-            assetFileNames: '_wu/[name].[hash].[ext]',
+            assetFileNames: '_wu/assets/[name].[hash].[ext]',
             chunkFileNames: '_wu/[name].[hash].js',
             entryFileNames: '_wu/[name].[hash].js',
+            manualChunks(id) {
+               if(id.includes('@vue/runtime-core')) {
+                  return 'vendors/vue-runtime'
+               }
+               if(id.includes('@vue/reactivity')) {
+                  return 'vendors/vue-reactivity'
+               }
+               if(id.includes('vue-router')) {
+                  return 'vendors/router'
+               }
+               if(id.includes('@microsoft/fast-colors') ||
+                  id.includes('@microsoft/fast-element')) {
+                     return 'vendors/ms1'
+                  }
+               if(id.includes('@microsoft/fast-foundation')) {
+                  return 'vendors/ms2'
+               }
+               if(id.includes('@fluentui/web-components')){
+                  return 'vendors/fluentui'
+               }
+            }
          }
       }
    },
