@@ -2,7 +2,7 @@ name: Build
 on:
    push:
       # 由于其它分支为本地测试打包，故只 CI 主线变更
-      branches: [wu_main]
+      branches: [wu/main]
       paths-ignore:
          - '**.md'
          - '**.txt'
