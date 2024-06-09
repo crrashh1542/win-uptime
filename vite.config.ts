@@ -29,23 +29,18 @@ export default defineConfig({
             entryFileNames: '_wu/[name].[hash].js',
             minifyInternalExports: true,
             manualChunks(id) {
-               if(id.includes('@vue/runtime-core')) {
+               if(id.includes('@vue')) {
                   return 'vendors/vue-runtime'
-               }
-               if(id.includes('@vue/reactivity')) {
-                  return 'vendors/vue-reactivity'
                }
                if(id.includes('vue-router')) {
                   return 'vendors/router'
                }
                if(id.includes('@microsoft/fast-colors') ||
                   id.includes('@microsoft/fast-element')) {
-                     return 'vendors/ms1'
+                     return 'vendors/ms'
                   }
-               if(id.includes('@microsoft/fast-foundation')) {
-                  return 'vendors/ms2'
-               }
-               if(id.includes('@fluentui/web-components')){
+               if(id.includes('@microsoft/fast-foundation') ||
+                  id.includes('@fluentui/web-components')) {
                   return 'vendors/fluentui'
                }
             }
