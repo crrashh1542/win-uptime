@@ -17,20 +17,42 @@ defineOptions({ name: 'WidgetTopNav' })
 <style lang="less">
 @import url('@s/global.less');
 .nav {
-   margin: 0 0.4em 12px;
+   margin: 0 .3em 10px;
    color: #666;
 
+   span {
+      font-size: var(--w-nav-size);
+   }
    span.w-icon-left {
       float: left;
    }
    span.w-icon-left::before {
-      margin-right: 0.4em;
+      margin-right: var(--w-nav-icon-spacing);
+      font-size: calc(var(--w-nav-size) - 2px);
    }
    span.w-icon-right {
       float: right;
    }
    span.w-icon-right::after {
-      margin-left: 0.4em;
+      margin-left: var(--w-nav-icon-spacing);
+      font-size: calc(var(--w-nav-size) - 2px);
+   }
+}
+
+// 响应式 ---- 移动端
+@media screen and (max-width: 800px) {
+   .nav {
+      --w-nav-icon-spacing: .4em;
+      --w-nav-size: 16px;
+   }
+}
+
+// 响应式 ---- PC
+@media screen and (min-width: 800px) {
+   .nav {
+      --w-nav-icon-spacing: .4em;
+      --w-nav-size: 18px;
    }
 }
 </style>
+
