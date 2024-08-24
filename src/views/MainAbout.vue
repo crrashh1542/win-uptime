@@ -32,7 +32,7 @@ const sources = [
    </p>
    <br />
 
-   <Card v-for="i in buildInfo" :key="i.key" class="text-lg">
+   <Card v-for="i in buildInfo" :key="i.key" class="section text-lg">
       <!-- 如果有外部链接，加 a 标签 -->
       <a v-if="i[3] !== undefined" :href="i[2]" class="flex" target="_blank">
          <span class="flex-none item" :class="i[1]">{{ i[0] }}</span>
@@ -70,7 +70,7 @@ const sources = [
    <p>
       Windows 为 Microsoft Corporation 的注册商标，本项目与 Microsoft
       Corporation 无关。项目采用的所有字体和图片均搜集自网络且仅用作学习，
-      其版权归原公司所有；项目采用的所有图标来自<a
+      其版权归原公司所有；项目采用的所有图标来自 <a
          href="https://www.iconfont.cn">iconfont</a>。
    </p>
 </template>
@@ -78,11 +78,20 @@ const sources = [
 <style lang="less" scoped>
 @import url('@s/global.less');
 .card {
-   padding: 10px 18px;
+   display: block;
+   margin: 3px 0;
+   padding: 18px calc(12px + 1.2%);
+   box-shadow: unset;
+   border-radius: 5px;
+   border: 1px solid #e6e6e6;
+   font-size: 18px;
 
    .item::before {
-      margin-right: 10px;
-      font-size: 18px;
+      margin: 0 18px 0 0;
+   }
+
+   .value {
+      color: #666;
    }
 }
 
@@ -94,9 +103,9 @@ li {
 // 移动端
 @media screen and (max-width: 800px) {
    .card {
-      .value {
-         font-size: 16px;
-      }
+      font-size: 16px;
+      .item::before { margin: 0 8px 0 0; }
+    //   .value { font-size: 16px; }
    }
 }
 </style>
