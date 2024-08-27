@@ -1,69 +1,62 @@
 {
-  "name": "win-up-to-date",
-  "version": "0.13.8",
-  "description": "A website project showing the latest status of Windows Insider versions.",
-  "author": "crrashh1542 <kotsuki@crrashh.com>",
-  "homepage": "https://wutd.crrashh.com",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/crrashh1542/win-up-to-date"
-  },
-  "license": "GPL-3.0",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/crrashh1542/win-up-to-date/issues"
-  },
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/eslint-parser": "^7.23.10",
-    "@fluentui/web-components": "^2.5.16",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
-    "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-plugin-eslint": "~5.0.8",
-    "@vue/cli-service": "~5.0.8",
-    "autoprefixer": "^10.4.17",
-    "axios": "^1.6.7",
-    "compression-webpack-plugin": "^11.0.0",
-    "core-js": "^3.36.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-vue": "^9.22.0",
-    "js-cookie": "^3.0.5",
-    "less": "^4.2.0",
-    "less-loader": "^12.2.0",
-    "moment": "^2.30.1",
-    "normalize.css": "^8.0.1",
-    "postcss": "^8.4.35",
-    "speed-measure-webpack-plugin": "^1.5.0",
-    "tailwindcss": "^3.4.1",
-    "vue": "^3.4.19",
-    "vue-clipboard3": "^2.0.0",
-    "vue-router": "^4.3.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ],
-  "packageManager": "pnpm@8.15.3"
+   "name": "win-up-to-date",
+   "version": "0.13.9",
+   "description": "A website project showing the latest status of Windows Insider versions.",
+   "author": "crrashh1542 <kotsuki@crrashh.com>",
+   "homepage": "https://wutd.crrashh.com",
+   "type": "module",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/crrashh1542/win-up-to-date"
+   },
+   "license": "GPL-3.0",
+   "private": true,
+   "bugs": {
+      "url": "https://github.com/crrashh1542/win-up-to-date/issues"
+   },
+   "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview",
+      "p:check": "prettier . --check",
+      "p:write": "prettier . --write"
+   },
+   "devDependencies": {
+      "@fluentui/web-components": "^2.6.1",
+      "@vitejs/plugin-vue": "^5.1.2",
+      "autoprefixer": "^10.4.20",
+      "axios": "^1.7.5",
+      "eslint": "^9.9.1",
+      "eslint-plugin-vue": "^9.27.0",
+      "js-cookie": "^3.0.5",
+      "less": "^4.2.0",
+      "moment": "^2.30.1",
+      "normalize.css": "^8.0.1",
+      "postcss": "^8.4.41",
+      "prettier": "^3.3.3",
+      "tailwindcss": "^3.4.10",
+      "vite": "^5.4.2",
+      "vite-plugin-pwa": "^0.20.1",
+      "vue": "^3.4.38",
+      "vue-clipboard3": "^2.0.0",
+      "vue-router": "^4.4.3"
+   },
+   "eslintConfig": {
+      "root": true,
+      "env": {
+         "node": true
+      },
+      "extends": [
+         "plugin:vue/vue3-essential",
+         "eslint:recommended"
+      ],
+      "rules": {}
+   },
+   "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not dead",
+      "not ie 11"
+   ],
+   "packageManager": "pnpm@9.2.0"
 }

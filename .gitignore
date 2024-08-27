@@ -1,16 +1,6 @@
 .DS_Store
 node_modules
-/dist
-/temp
-
-# Yarn files
-/.pnp
-.pnp.js
-.pnp.cjs
-.pnp.loader.mjs
-.yarn/cache
-.yarn/unplugged
-.yarn/install-state.gz
+dist
 
 # local env files
 .env.local
@@ -30,3 +20,4 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+scripts/buildInfo.json
