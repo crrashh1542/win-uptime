@@ -16,42 +16,48 @@
 
 // 文档流初始化
 body {
-   background-size: cover;
-   background-image: url('@a/images/bg.webp');
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   overflow-x: hidden;
-   height: 100%;
-   font-family: @wu-font-family;
-   blockquote:before, blockquote:after, q:before, q:after {
-      content: '';
-      content: none;
-   }
-   p {
-      font-size: 18px;
-      line-height: 1.6em;
-      margin: 1em 0;
-   }
-   #app {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-   }
+    background-size: cover;
+    background-image: url('@a/images/bg.webp');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    height: 100%;
+    font-family: @wu-font-family;
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.6em;
+        margin: 1em 0;
+    }
+    #app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-   /* a标签图标及hover处理 */
-   a.link::after, p a::after {
-      color: @wu-color-text-accent;
-      font-size: 15px;
-      vertical-align: middle;
-      text-align: center;
-      margin-left: 0.1em;
-      display: inline-block;
-      content: '\e622';
-   }
-   .appbar a:hover, p a:hover {
-      color: @wu-color-theme !important;
-   }
-   .appbar a:hover::after, p a:hover::after {
-      color: @wu-color-theme;
-   }
+    /* a标签图标及hover处理 */
+    a.link::after,
+    p a::after {
+        color: @wu-color-text-accent;
+        font-size: 15px;
+        vertical-align: middle;
+        text-align: center;
+        margin-left: 0.1em;
+        display: inline-block;
+        content: '\e622';
+    }
+    .appbar a:hover,
+    p a:hover {
+        color: @wu-color-theme !important;
+    }
+    .appbar a:hover::after,
+    p a:hover::after {
+        color: @wu-color-theme;
+    }
 }

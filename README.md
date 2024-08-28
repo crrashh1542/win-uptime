@@ -19,15 +19,15 @@
 
 若要自行打包，需要注意以下几点：
 
--  必须要将项目 clone 下来，使用 zip 源代码下载方式会导致 prebuild 环节出错。
--  包管理器使用 PNPM，需要先安装管理器再安装依赖。
+-   必须要将项目 clone 下来，使用 zip 源代码下载方式会导致 prebuild 环节出错。
+-   包管理器使用 PNPM，需要先安装管理器再安装依赖。
 
 ```bash
 npm install pnpm -g
 pnpm install
 ```
 
--  启动各环境的命令详见 [`package.json`](./package.json)，~~测试环境以后会加上的！~~
+-   启动各环境的命令详见 [`package.json`](./package.json)，~~测试环境以后会加上的！~~
 
 ## 分支相关
 
