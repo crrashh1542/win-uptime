@@ -107,9 +107,6 @@ export default {
             font-size: 12px;
         }
     }
-    .section:hover, .section:active, .section:visited {
-        color: #000;
-    }
 
     // 被选中的 section
     .section.path-active {
@@ -140,9 +137,9 @@ main {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: calc(100% - 72px - 2 * 16px);
-    height: calc(100% - 54px - 2 * 16px);
-    padding: 16px;
+    width: calc(100% - 72px - 2 * 24px);
+    height: calc(100% - 54px - 2 * 24px);
+    padding: 24px;
     margin: 48px 0px 0px 72px;
     border-left: 1px solid @wu-color-border;
     border-top: 1px solid @wu-color-border;
