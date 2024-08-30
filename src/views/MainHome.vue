@@ -3,15 +3,8 @@
 import { reactive, toRefs } from 'vue'
 import axios from 'axios'
 
-// 引入组件
-import Banner from '../components/Banner.vue'
-import Catalog from '../components/Catalog.vue'
-import Card from '../components/Card.vue'
-import LoadAnim from '../components/LoadAnim.vue'
-
 export default {
     name: 'MainHome',
-    components: { Banner, Catalog, Card, LoadAnim },
     setup() {
         // STEP1 ------ 设定初始值
         document.title = 'Windows Up-to-Date'
@@ -23,8 +16,7 @@ export default {
         // STEP2 ------ 获取数据
         // 此处填写 Windows 最新数据的 API 地址，相关 API 方面，咕咕正在 TODO 状态中
         // 目前仅仅对 github.com/crrashh1542/win-up-to-date@data/versions.json 做了反代而已
-        axios
-            .get('https://wutd.api.crrashh.com/v1/latestVersions')
+        axios.get('https://wutd.api.crrashh.com/v1/latestVersions')
 
             // STEP3 ------ 处理并修改数据
             .then((response) => {
@@ -52,117 +44,7 @@ export default {
 </script>
 
 <template>
-    <!-- 横幅 -->
-    <Banner
-        class="z-20"
-        description="一个反映 Windows 系统各版本情况实时进展的统计站点"
-    >
-        <div class="title">Windows Up-to-Date</div>
-    </Banner>
-
-    <!-- 加载动画 -->
-    <LoadAnim v-if="isLoading" />
-
-    <!-- 内容块 -->
-    <div v-if="!isLoading">
-        <div class="block" v-for="d in list" :key="d.category" :id="d.category">
-            <!-- 标题 -->
-            <Catalog> <span :class="d.style"></span>{{ d.category }} </Catalog>
-
-            <!-- 卡片 -->
-            <Card v-for="r in d.releases" :key="r.name" :class="r.style">
-                <!-- 如果 r.category 存在则设置 router-link -->
-                <router-link
-                    :to="constructRoute(r.category, r.version)"
-                    v-if="r.category !== undefined"
-                >
-                    <div class="info">
-                        <!-- 第一行 -->
-                        <div class="row">
-                            <span
-                                class="font-medium text-base leading-none category"
-                            >
-                                {{ r.name
-                                }}<!-- 类型 -->
-                            </span>
-                            <span
-                                class="detail codename float-right"
-                                v-if="isShowFlight !== false"
-                            >
-                                {{ r.codename }} {{ r.period
-                                }}<!-- 周期和代号 -->
-                            </span>
-                        </div>
-
-                        <!-- 第二行 -->
-                        <div class="font-medium text-2xl version">
-                            {{ r.version
-                            }}<!-- 版本 -->
-                        </div>
-
-                        <!-- 第三行 -->
-                        <div
-                            class="row"
-                            v-if="
-                                r.branch !== undefined && isShowBranch !== false
-                            "
-                        >
-                            <span class="detail branch">
-                                {{ r.branch
-                                }}<!-- 分支 -->
-                            </span>
-                        </div>
-                        <div class="row" v-else-if="isShowBranch !== false">
-                            <span class="detail"></span>
-                        </div>
-                    </div>
-                </router-link>
-
-                <div v-else>
-                    <div class="info">
-                        <!-- 第一行 -->
-                        <div class="row">
-                            <span
-                                class="font-medium text-base leading-none category"
-                            >
-                                {{ r.name
-                                }}<!-- 类型 -->
-                            </span>
-                            <span
-                                class="detail codename float-right"
-                                v-if="isShowFlight !== false"
-                            >
-                                {{ r.codename }} {{ r.period
-                                }}<!-- 周期和代号 -->
-                            </span>
-                        </div>
-
-                        <!-- 第二行 -->
-                        <div class="font-medium text-2xl version">
-                            {{ r.version
-                            }}<!-- 版本 -->
-                        </div>
-
-                        <!-- 第三行 -->
-                        <div
-                            class="row"
-                            v-if="
-                                r.branch !== undefined && isShowBranch !== false
-                            "
-                        >
-                            <span class="detail branch">
-                                {{ r.branch
-                                }}<!-- 分支 -->
-                            </span>
-                        </div>
-                        <div class="row" v-else-if="isShowBranch !== false">
-                            <span class="detail"></span>
-                        </div>
-                    </div>
-                </div>
-            </Card>
-        </div>
-    </div>
+    vue-router-home
 </template>
 
 <style lang="less" scoped>

@@ -47,15 +47,9 @@ export default {
 </script>
 
 <template>
-    <Wrapper />
-    <!-- <main>
-        <router-view
-            :isShowFlight="isShowFlight"
-            :isShowBranch="isShowBranch"/>
-    </main>
-    <Foo class="z-20" />
-    <Navbar class="z-40"></Navbar>
-    <Setting class="z-50" @isShowFlight="setState" @isShowBranch="setState" /> -->
+    <Wrapper>
+        <router-view></router-view>
+    </Wrapper>
 </template>
 
 <style lang="less">
