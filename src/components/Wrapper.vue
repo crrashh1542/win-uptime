@@ -137,9 +137,9 @@ main {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: calc(100% - 72px - 2 * 24px);
+    width: calc(100% - 72px - 2 * 36px);
     height: calc(100% - 54px - 2 * 24px);
-    padding: 24px;
+    padding: 24px 36px;
     margin: 48px 0px 0px 72px;
     border-left: 1px solid @wu-color-border;
     border-top: 1px solid @wu-color-border;

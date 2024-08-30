@@ -1,10 +1,9 @@
-<script setup>
+<script>
 // 引入组件
-import Banner from '../components/Banner.vue'
+import { Icon } from '@iconify/vue'
 import Card from '../components/Card.vue'
 
 // 设定数据
-document.title = '关于项目 / Windows Up-to-Date'
 import buildInfo from '../utils/parseRepoInfo'
 const sources = [
     ['https://msbuilds.rg-adguard.net', 'MSFT BUFFET DATABASE'],
@@ -15,16 +14,27 @@ const sources = [
     ],
     ['https://community.wvbtech.com', 'wvbCommunity'],
 ]
+
+export default {
+    name: 'MainAbout',
+    data(){
+        return { buildInfo, sources }
+    },
+    components: { Icon, Card },
+    setup(){
+        document.title = '关于项目 / Windows Up-to-Date'
+    }
+}
 </script>
 
 <template>
-    <Banner class="z-20">
-        <div class="title">关于项目</div>
-    </Banner>
+    <div class="u-banner">
+        关于项目
+    </div>
 
     <p>
         如你所见，这是一个反映 Windows
-        系统各版本情况实时进展的统计<s>和一大堆其它莫名其妙的功能混一起的</s>的孤单的站点。
+        系统各版本情况实时进展的统计<s>和一堆其它莫名其妙的功能混一起的</s>的孤单的站点。
     </p>
     <p>
         作者云萧自身也是一个 Windows Insider
@@ -32,20 +42,22 @@ const sources = [
     </p>
     <br />
 
-    <Card v-for="i in buildInfo" :key="i.key" class="section text-lg">
+    <Card v-for="i in buildInfo" :key="i.key">
         <!-- 如果有外部链接，加 a 标签 -->
-        <a v-if="i[3] !== undefined" :href="i[2]" class="flex" target="_blank">
-            <span class="flex-none item" :class="i[1]">{{ i[0] }}</span>
-            <span class="grow"></span>
-            <span class="flex-none value">{{ i[3] }}</span>
+        <a v-if="i[3] !== undefined" :href="i[2]" target="_blank">
+            <Icon :icon="i[1]" class="icon" />
+            <span class="item">{{ i[0] }}</span>
+            <span class="u-grow"></span>
+            <span class="value">{{ i[3] }}</span>
         </a>
 
         <!-- 如果没有外部链接，加 span 标签 -->
-        <span v-else class="flex">
-            <span class="flex-none item" :class="i[1]">{{ i[0] }}</span>
-            <span class="grow"></span>
-            <span class="flex-none value">{{ i[2] }}</span>
-        </span>
+        <div v-else>
+            <Icon :icon="i[1]" class="icon" />
+            <span class="item">{{ i[0] }}</span>
+            <span class="u-grow"></span>
+            <span class="value">{{ i[2] }}</span>
+        </div>
     </Card>
 
     <br />
@@ -66,43 +78,32 @@ const sources = [
     <p>
         Windows 为 Microsoft Corporation 的注册商标，本项目与 Microsoft
         Corporation 无关。项目采用的所有字体和图片均搜集自网络且仅用作学习，
-        其版权归原公司所有；项目采用的所有图标来自 <a href="https://www.iconfont.cn">iconfont</a>。
+        其版权归原公司所有；项目采用的所有图标来自 <a href="https://iconify.design">iconify</a>。
     </p>
 </template>
 
 <style lang="less" scoped>
-@import url('@s/global.less');
+@import url('@s/reset.less');
 
 .card {
-    display: block;
-    margin: 3px 0;
-    padding: 18px calc(12px + 1.2%);
-    box-shadow: unset;
-    border-radius: 5px;
-    border: 1px solid #e6e6e6;
-    font-size: 18px;
-
-    .item::before {
-        margin: 0 18px 0 0;
-    }
-
-    .value {
-        color: #666;
+    a, div {
+        display: flex; 
+        font-size: 16px;
+        line-height: 24px;
+        .icon {
+            font-size: 24px;
+            margin-right: 18px;
+        }
+        .value {
+            font-size: 16px;
+            font-family: Segoe UI Variable Display;
+            color: #666;
+        }
     }
 }
 
 li {
     list-style: circle;
-    margin-left: 1em;
-}
-
-// 移动端
-@media screen and (max-width: 800px) {
-    .card {
-        font-size: 16px;
-        
-        .item::before { margin: 0 8px 0 0; }
-        // .value { font-size: 16px; }
-    }
+    margin: 3px 1em;
 }
 </style>

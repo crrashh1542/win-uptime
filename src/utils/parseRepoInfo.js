@@ -21,11 +21,11 @@ const pRepoName = packageRepo.split('https://github.com/')[1] // 项目名
 
 // 导出数据
 export default [
-    ['站点版本', 'w-icon-version', pVersion],
-    ['项目地址', 'w-icon-github', packageRepo, pRepoName],
+    ['站点版本', 'fluent:search-24-regular', pVersion],
+    ['项目地址', 'fluent:code-24-regular', packageRepo, pRepoName],
     [
         '交流群组',
-        'w-icon-qq',
+        'fluent:chat-24-regular',
         '//qm.qq.com/cgi-bin/qm/qr?k=i3uo_SoY8qYCP-DwlWN0MvBFzU7dIl-V&group_code=442133970',
         '442133970',
     ],
