@@ -144,7 +144,7 @@ main {
     border-left: 1px solid @wu-color-border;
     border-top: 1px solid @wu-color-border;
     background-color: @wu-color-main;
-    border-radius: 6px 0 0 0;
+    border-radius: @wu-layout-radius 0 0 0;
     text-align: left;
     overflow: auto;
     box-shadow: 0px 0px 8px #00000011;

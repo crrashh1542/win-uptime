@@ -18,7 +18,7 @@ export default {
     margin: 3px 0;
     padding: 18px calc(12px + 1.2%);
     line-height: 1.2;
-    border-radius: 5px;
+    border-radius: @wu-layout-radius;
     border: 1px solid #e6e6e6;
     font-size: 18px;
 }
