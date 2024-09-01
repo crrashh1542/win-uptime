@@ -61,7 +61,6 @@ export default {
     height: 54px;
     padding: 0 14px;
     font-size: 18px;
-    font-family: Segoe UI Variable Display;
     user-select: none;
 
     .title {

@@ -96,7 +96,6 @@ export default {
         }
         .value {
             font-size: 16px;
-            font-family: Segoe UI Variable Display;
             color: #666;
         }
     }
