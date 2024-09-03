@@ -1,7 +1,7 @@
 <script>
 // 引入组件
 import { Icon } from '@iconify/vue'
-import Card from '../components/Card.vue'
+import Card from '../components/widgets/Card.vue'
 
 // 设定数据
 import buildInfo from '../utils/parseRepoInfo'
