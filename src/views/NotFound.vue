@@ -1,20 +1,14 @@
-<script>
+<script setup>
 import Button from '../components/widgets/Button.vue'
 
-export default {
-    name: 'ViewNotFound',
-    components: { Button },
-    setup() {
-        document.title = '404 / Windows Up-to-Date'
-    },
-    methods: {
-        goBack(){
-            this.$router.back(-1)
-        },
-        goHome(){
-            this.$router.push('/')
-        },
-    }
+defineOptions({ name: 'ViewNotFound' })
+document.title = '404 / Windows Up-to-Date'
+
+function goBack(){
+    this.$router.back(-1)
+}
+function goHome(){
+    this.$router.push('/')
 }
 </script>
 

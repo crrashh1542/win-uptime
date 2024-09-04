@@ -1,7 +1,5 @@
-<script>
-export default {
-    name: 'WidgetCard',
-}
+<script setup>
+defineOptions({ name: 'WidgetCard' })
 </script>
 
 <template>

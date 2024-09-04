@@ -1,7 +1,5 @@
-<script>
-export default {
-    name: 'WidgetButton'
-}
+<script setup>
+defineOptions({ name: 'WidgetButton' })
 </script>
 
 <template>

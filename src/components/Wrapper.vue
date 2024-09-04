@@ -1,14 +1,10 @@
-<script>
+<script setup>
+import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
 import { version } from '../../package.json'
 
-export default {
-    name: 'MainWrapper',
-    data() {
-        return { version }
-    },
-    components: { Icon }
-}
+defineOptions({ name: 'MainWrapper' })
+const appVersion = ref(version)
 </script>
 
 <template>
@@ -16,7 +12,7 @@ export default {
     <div class="topbar">
         <div class="title">
             <span class="name">Windows Up-to-Date</span>&nbsp;
-            <span class="version">v{{ version }}</span>
+            <span class="version">v{{ appVersion }}</span>
         </div>
         <div class="u-grow"></div>
         <div class="setting">
