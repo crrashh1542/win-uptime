@@ -67,14 +67,11 @@ export default {
     </p>
     <p>以下为该仓库数据的数据来源，由衷感谢：</p>
 
-    <p>
     <ul>
         <li v-for="s in sources" :key="s.value">
             <a target="_blank" class="link" :href="s[0]">{{ s[1] }}</a>
         </li>
     </ul>
-    </p>
-
     <p>
         Windows 为 Microsoft Corporation 的注册商标，本项目与 Microsoft
         Corporation 无关。项目采用的所有字体和图片均搜集自网络且仅用作学习，
