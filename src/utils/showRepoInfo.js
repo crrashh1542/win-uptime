@@ -2,7 +2,7 @@
 /**
  * 此脚本用于在控制台中显示本项目相关信息
  * @author crrashh1542
- * @version 2.2
+ * @version 2.3
  */
 
 import buildInfo from '../../scripts/buildInfo.json'
@@ -49,31 +49,6 @@ export default function showInfo() {
                         padding: 5px 9px;
                         border-radius: 0 3px 3px 0;
                         margin: 6px 0; `
-    let stylePlaceholder = `margin: 0;
-                           padding: 0; `
-    let styleTagName = `font-size: 13px;
-                       color: #fff;
-                       background-color: #555;
-                       padding: 3px 9px;
-                       border-radius: 3px 0 0 3px;
-                       margin: 0 0 10px; `
-    let styleTagValue = `font-size: 13px;
-                        color: #fff;
-                        background-color: #5296ff;
-                        padding: 3px 9px;
-                        border-radius: 0 3px 3px 0;
-                        margin: 0 0 10px; `
-    console.log(
-        '%c%s%c%s%c%s%c%s%c%s',
-        styleVerName,
-        'wutd',
-        styleVerValue,
-        version,
-        stylePlaceholder,
-        '\n',
-        styleTagName,
-        'Build Tag',
-        styleTagValue,
-        tag
-    )
+    console.log('%c%s%c%s', styleVerName, 'wutd', styleVerValue, version)
+    console.log('[Info] Build tag: ' + tag)
 }
