@@ -5,59 +5,19 @@ defineOptions({ name: 'MainFooter' })
 <template>
     <div class="footer">
         <p>
-            (C) Copyright 2023-2024 Kotsuki Crrashh. /
-            <a href="//beian.miit.gov.cn" target="_blank"
-                >蜀ICP备2022029657号-2</a
-            >
-            /
-            <a href="//icp.gov.moe/?keyword=20220551" target="_blank"
-                >萌ICP备20220551号</a
-            >
+            (C) Copyright 2023-2024 crrashh1542. /
+            <a href="//beian.miit.gov.cn" target="_blank">蜀ICP备2022029657号-2</a> /
+            <a href="//icp.gov.moe/?keyword=20220551" target="_blank">萌ICP备20220551号</a>
         </p>
     </div>
 </template>
 
 <style lang="less" scoped>
 @import url('@s/global.less');
-@import url('@s/adaption.less');
-
 .footer {
-    background-color: var(--footer-bg);
-    border-top: 1px solid @wu-color-split-line;
-    padding: 0.5em var(--container-padding);
-    color: @wu-color-text-accent;
-    margin-bottom: var(--footer-bottom-spacing);
 
-    p {
-        line-height: var(--footer-line-height) !important;
-        margin: var(--footer-margin);
-        font-size: 16px;
-    }
-}
-
-/* 不同设备适配 */
-@media screen and (max-width: 650px) {
-    .footer {
-        --footer-bg: @wu-color-theme-lighter;
-        --footer-line-height: 1.6;
-        --footer-margin: 0.9em 0;
-        --footer-bottom-spacing: 73px;
-    }
-}
-
-@media screen and (min-width: 650px) {
-    .footer {
-        --footer-bg: @wu-color-theme-bg;
-        --footer-line-height: 1.6;
-        --footer-margin: 0.9em 0;
-        --footer-bottom-spacing: 0;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .footer {
-        --footer-line-height: 1.4;
-        --footer-margin: 0.5em 0;
-    }
+    border-top: 1px solid @wu-color-border;
+    padding: 0 36px;
+    width: calc(100% - 72px);
 }
 </style>
