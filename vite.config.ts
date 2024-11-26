@@ -10,14 +10,7 @@ prebuild()
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
-        vue({
-            template: {
-                compilerOptions: {
-                    // 不解析 fluent- 开头的 Web Component 元素
-                    isCustomElement: (tag) => tag.startsWith('fluent-'),
-                },
-            },
-        }),
+        vue(),
         VitePWA({
             includeAssets: [
                 'favicon.ico',
@@ -64,18 +57,6 @@ export default defineConfig({
                     }
                     if (id.includes('vue-router')) {
                         return 'vendors/router'
-                    }
-                    if (
-                        id.includes('@microsoft/fast-colors') ||
-                        id.includes('@microsoft/fast-element')
-                    ) {
-                        return 'vendors/ms'
-                    }
-                    if (
-                        id.includes('@microsoft/fast-foundation') ||
-                        id.includes('@fluentui/web-components')
-                    ) {
-                        return 'vendors/ui'
                     }
                 },
             },
