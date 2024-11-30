@@ -40,10 +40,17 @@ const appVersion = ref(version)
 
         <!-- Part 3 ---- 主体部分 -->
         <main>
-            <div class="container">
-                <slot />
+            <!--
+                此处 container 用于将内容包装在一个 div 内，保证 flex 中只有一个 div 和 footer，
+                以达到 footer 始终置底的效果。此处套用两层 div，是为了让内容能够获得完整高度；
+                若只套用一层 div，即使设置了 min-height，内容高度也只有 100% - 36px（见 L161）
+            -->
+            <div class="container-outer">
+                <div class="container-inner">
+                    <slot />
+                </div>
+                <Foo />
             </div>
-            <Foo />
         </main>
 
 </template>
@@ -150,12 +157,14 @@ main {
     // 设置 flex 是为了能让 footer 始终置于页面底部
     flex-direction: column;
     justify-content: space-between;
-    .container { // 此处 container 用于将内容包装在一个 div 内，保证 flex 中只有一个 div 和 footer，防止冲突
-        display: relative;
-        height: calc(100% - 36px);
-        width: calc(100% - 72px);
-        padding: 24px 36px 12px;
-
+    .container-outer {
+        min-height: calc(100% - 72px);
+        padding: 24px 0 0;
+        .container-inner {
+            padding: 0 36px;
+            width: calc(100% - 72px);
+            min-height: calc(100% - 36px);
+        }
     }
 }
 
