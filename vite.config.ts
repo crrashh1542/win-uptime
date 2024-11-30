@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { fileURLToPath, URL } from 'node:url'
+import { resolve } from 'path'
 import { VitePWA } from 'vite-plugin-pwa'
 import vue from '@vitejs/plugin-vue'
 
@@ -72,9 +72,7 @@ export default defineConfig({
     // 引入@作为./src的alias
     resolve: {
         alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)),
-            '@a': fileURLToPath(new URL('./src/assets', import.meta.url)),
-            '@s': fileURLToPath(new URL('./src/styles', import.meta.url)),
+            '@': resolve(__dirname, './src')
         },
     },
 })
