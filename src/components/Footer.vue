@@ -13,7 +13,7 @@ defineOptions({ name: 'MainFooter' })
 </template>
 
 <style lang="less" scoped>
-@import url('@s/global.less');
+@import url('@/styles/global.less');
 .footer {
 
     border-top: 1px solid @wu-color-border;

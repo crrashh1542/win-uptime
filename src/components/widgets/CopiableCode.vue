@@ -31,7 +31,7 @@ function copy(content) {
 </template>
 
 <style lang="less" scoped>
-@import url('@s/global.less');
+@import url('@/styles/global.less');
 
 code {
     background-color: @wu-color-theme-lighter;

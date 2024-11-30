@@ -9,7 +9,7 @@ defineOptions({ name: 'WidgetCard' })
 </template>
 
 <style lang="less">
-@import url('@s/global.less');
+@import url('@/styles/global.less');
 
 .card {
     display: block;

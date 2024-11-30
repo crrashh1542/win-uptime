@@ -49,7 +49,7 @@ const appVersion = ref(version)
 </template>
 
 <style lang="less">
-@import url('@s/reset.less');
+@import url('@/styles/reset.less');
 
 .topbar {
     display: flex;
@@ -151,6 +151,9 @@ main {
     flex-direction: column;
     justify-content: space-between;
     .container { // 此处 container 用于将内容包装在一个 div 内，保证 flex 中只有一个 div 和 footer，防止冲突
+        display: relative;
+        height: calc(100% - 36px);
+        width: calc(100% - 72px);
         padding: 24px 36px 12px;
 
     }

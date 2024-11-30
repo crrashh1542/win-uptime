@@ -9,7 +9,7 @@ defineOptions({ name: 'WidgetButton' })
 </template>
 
 <style lang="less">
-@import url('@s/global.less');
+@import url('@/styles/global.less');
 
 .button {
     display: inline-block;
