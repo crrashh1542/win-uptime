@@ -42,7 +42,7 @@ export default {
     </p>
     <br />
 
-    <Card v-for="i in buildInfo" :key="i.key">
+    <Card v-for="i in buildInfo" :key="i.key" mode="section">
         <!-- 如果有外部链接，加 a 标签 -->
         <a v-if="i[3] !== undefined" :href="i[2]" target="_blank">
             <Icon :icon="i[1]" class="icon" />
