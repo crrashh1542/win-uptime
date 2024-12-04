@@ -18,6 +18,7 @@ defineOptions({ name: 'MainFooter' })
     border-top: 1px solid @wu-color-border;
     padding: 1em 36px;
     width: calc(100% - 72px);
+    font-size: 16px;
     p { margin: 0; }
 }
 </style>

@@ -151,19 +151,18 @@ main {
     background-color: @wu-color-main;
     border-radius: @wu-layout-radius 0 0 0;
     text-align: left;
-    overflow: auto;
     box-shadow: 0px 0px 8px #00000011;
     scroll-behavior: smooth;
+    overflow-y: scroll;
     // 设置 flex 是为了能让 footer 始终置于页面底部
     flex-direction: column;
-    justify-content: space-between;
     .container-outer {
-        min-height: calc(100% - 72px);
-        padding: 24px 0 0;
+        min-height: calc(100% - 80px);
+        padding: 24px 0 56px; // 下边距 56px 为 Footer 组件高度
         .container-inner {
             padding: 0 36px;
             width: calc(100% - 72px);
-            min-height: calc(100% - 36px);
+            min-height: calc(100% - 1px);
         }
     }
 }

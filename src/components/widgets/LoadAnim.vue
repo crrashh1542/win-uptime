@@ -28,10 +28,12 @@ if (mode !== 'filled'){ mode = '' }
             数据正在玩命加载中 ᕕ( ᐛ )ᕗ
         </div>
     </div>
-    
-    <!-- <div class="tip">
 
-    </div> -->
+    <!--
+        若mode为filled，则需要其内有内容支撑，否则整个外部flex的高度会多出24px
+        导致Footer组件被挤到页面底部之外，出现排版错误。
+    -->
+    <div class="placeholder" v-if="mode == 'filled'">placeholder</div>
 </template>
 
 <style lang="less">
@@ -141,5 +143,8 @@ if (mode !== 'filled'){ mode = '' }
     .tip {
         margin-top: 1em;
     }
+}
+.placeholder {
+    opacity: 0;
 }
 </style>
